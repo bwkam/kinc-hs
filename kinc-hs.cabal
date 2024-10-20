@@ -60,6 +60,9 @@ executable kinc-hs
     -- .hs or .lhs file containing the Main module.
     main-is:          Main.hs
 
+    extra-lib-dirs: Kinc/build/Release
+    extra-libraries: kinc
+
     -- Modules included in this executable, other than Main.
     other-modules: Graphics
 
