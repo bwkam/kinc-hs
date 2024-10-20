@@ -16,8 +16,9 @@ main = do
             c_kinc_g4_clear 1 0 0 0
             c_kinc_g4_end 0
             c_kinc_swap_buffers
+            return ()
         )
     )
     nullPtr
   c_kinc_start
-  putStrLn "hey"
+  return ()
