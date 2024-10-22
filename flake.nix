@@ -45,7 +45,7 @@
       default = pkgs.mkShell {
         buildInputs = deps;
         shellHook = ''
-          export LD_LIBRARY_PATH=${builtins.concatStringsSep ":" (map (x: "${x}/lib") devDeps)}:Kinc/build/Release:$LD_LIBRARY_PATH
+          export LD_LIBRARY_PATH=${builtins.concatStringsSep ":" (map (x: "${x}/lib") devDeps)}:./:$LD_LIBRARY_PATH
         '';
       };
     });

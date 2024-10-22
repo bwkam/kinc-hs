@@ -1,7 +1,7 @@
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE ForeignFunctionInterface #-}
 
-module Graphics where
+module Graphics4.Graphics where
 
 import Data.Void (Void)
 import Foreign
@@ -11,6 +11,8 @@ import Foreign.C.Types
 data KincWindowOptions
 
 data KincFrameBufferOptions
+
+data KincPipeline
 
 type UpdateCallback a = Ptr a -> IO ()
 
@@ -30,3 +32,5 @@ foreign import ccall "kinc_start" c_kinc_start :: IO ()
 foreign import ccall "kinc_init" c_kinc_init :: CString -> Int -> Int -> Ptr KincWindowOptions -> Ptr KincFrameBufferOptions -> IO Int
 
 foreign import ccall "kinc_g4_clear" c_kinc_g4_clear :: Int -> Word32 -> CFloat -> Int -> IO ()
+
+foreign import ccall "kinc_g4_set_pipeline" c_kinc_g4_set_pipeline :: Ptr KincPipeline -> IO ()

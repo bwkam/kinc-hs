@@ -4,7 +4,7 @@ module Main where
 
 import Foreign (nullPtr)
 import GHC.Ptr (FunPtr (FunPtr), Ptr (Ptr))
-import Graphics (c_kinc_g4_begin, c_kinc_g4_clear, c_kinc_g4_end, c_kinc_init, c_kinc_set_update_callback, c_kinc_start, c_kinc_swap_buffers, mkFun)
+import Graphics4.Graphics
 
 main :: IO ()
 main = do

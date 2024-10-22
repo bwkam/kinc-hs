@@ -60,7 +60,7 @@ executable kinc-hs
     -- .hs or .lhs file containing the Main module.
     main-is:          Main.hs
 
-    extra-lib-dirs: Kinc/build/Release/
+    extra-lib-dirs: ./
     extra-libraries: kinc
 
     -- Modules included in this executable, other than Main.
@@ -70,10 +70,32 @@ executable kinc-hs
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.18.2.1
+    build-depends:    base ^>=4.18.2.1, kinc-hs
 
     -- Directories containing source files.
     hs-source-dirs:   app
+
+    -- Base language which the package is written in.
+    default-language: Haskell2010
+
+library
+    -- Import common warning flags.
+    import:           warnings
+
+    -- Modules exported by the library.
+    exposed-modules:  Graphics4.Graphics
+
+    -- Modules included in this library but not exported.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+
+    -- Other library packages from which modules are imported.
+    build-depends:    base ^>=4.18.2.1
+
+    -- Directories containing source files.
+    hs-source-dirs:   src
 
     -- Base language which the package is written in.
     default-language: Haskell2010
