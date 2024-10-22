@@ -60,7 +60,7 @@ executable kinc-hs
     -- .hs or .lhs file containing the Main module.
     main-is:          Main.hs
 
-    extra-lib-dirs: Kinc/build/Release
+    extra-lib-dirs: Kinc/build/Release/
     extra-libraries: kinc
 
     -- Modules included in this executable, other than Main.
@@ -71,11 +71,6 @@ executable kinc-hs
 
     -- Other library packages from which modules are imported.
     build-depends:    base ^>=4.18.2.1
-
-    -- include-dirs: ./Kinc/Sources/kinc/
-    -- c-sources: ./Kinc/Sources/kinc/
-    -- install-includes: ./Kinc/Sources/kinc/
-
 
     -- Directories containing source files.
     hs-source-dirs:   app

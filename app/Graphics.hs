@@ -29,4 +29,4 @@ foreign import ccall "kinc_start" c_kinc_start :: IO ()
 
 foreign import ccall "kinc_init" c_kinc_init :: CString -> Int -> Int -> Ptr KincWindowOptions -> Ptr KincFrameBufferOptions -> IO Int
 
-foreign import ccall "kinc_g4_clear" c_kinc_g4_clear :: Word8 -> Word8 -> CFloat -> Int -> IO ()
+foreign import ccall "kinc_g4_clear" c_kinc_g4_clear :: Int -> Word32 -> CFloat -> Int -> IO ()

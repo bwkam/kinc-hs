@@ -17,7 +17,7 @@ main = do
 update :: Ptr a -> IO ()
 update x = do
   c_kinc_g4_begin 0
-  c_kinc_g4_clear 1 0xFF0000FF 0 0
+  c_kinc_g4_clear 1 0xFF0000 0 0
   c_kinc_g4_end 0
   c_kinc_swap_buffers
   return ()
